@@ -9,6 +9,7 @@ class EntriesController < ApplicationController
       @entry = Entry.new
       @entry["title"] = params["title"]
       @entry["description"] = params["description"]
+      @entry["image"] = entry["image"]
       @entry.uploaded_image.attach(params["uploaded_image_input"])
       @entry["occurred_on"] = params["occurred_on"]
       @entry["place_id"] = params["place_id"]
